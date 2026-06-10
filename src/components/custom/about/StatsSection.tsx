@@ -1,4 +1,7 @@
+"use client";
+
 import { statsData } from "@/data/about";
+import Counter from "../Counter";
 
 export default function StatsSection() {
   return (
@@ -18,8 +21,11 @@ export default function StatsSection() {
                 }
               `}
             >
-              <h3 className="text-4xl font-bold text-white md:text-5xl">
-                {stat.value}
+              <h3 className="text-4xl font-bold text-[#1D9E75] md:text-5xl">
+                <Counter
+                  end={stat.value}
+                  suffix="+"
+                />
               </h3>
 
               <p className="mt-2 text-sm font-medium text-white/80 md:text-base">

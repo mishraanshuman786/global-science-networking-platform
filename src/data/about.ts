@@ -20,19 +20,23 @@ export const heroData = {
 
 export const statsData = [
   {
-    value: "50K+",
+    value: 50,
+    suffix:"K+",
     label: "Scientists",
   },
   {
-    value: "120+",
+    value: 120,
+    suffix:"+",
     label: "Countries",
   },
   {
-    value: "800+",
+    value: 800,
+    suffix:"+",
     label: "Institutions",
   },
   {
-    value: "200+",
+    value: 200,
+    suffix:"+",
     label: "Events / year",
   },
 ];

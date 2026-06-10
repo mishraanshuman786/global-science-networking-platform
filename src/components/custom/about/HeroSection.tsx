@@ -1,6 +1,16 @@
+"use client";
 import { heroData } from "@/data/about";
 import { Button } from "@/components/ui/button";
-import AboutGlobe from "../home/about-globe";
+import dynamic from "next/dynamic";
+const AboutGlobe = dynamic(
+  () => import("../home/about-globe"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-[300px] md:h-[500px]" />
+    ),
+  }
+);
 import Link from "next/link";
 
 export default function HeroSection() {

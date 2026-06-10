@@ -1,7 +1,17 @@
+"use client";
 import { heroData } from "@/data/home";
 import { Button } from "@/components/ui/button";
 import Counter from "../Counter";
-import AboutGlobe from "./about-globe";
+import dynamic from "next/dynamic";
+const AboutGlobe = dynamic(
+  () => import("./about-globe"),
+  {
+    ssr: false,
+    loading: () => (
+      <div className="h-[300px] md:h-[500px]" />
+    ),
+  }
+);
 import Link from "next/link";
 
 export default function HeroSection() {
@@ -81,3 +91,7 @@ export default function HeroSection() {
     </section>
   );
 }
+
+
+
+
