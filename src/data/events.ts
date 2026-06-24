@@ -75,7 +75,7 @@ export const upcomingEvents: Event[] = [
     id: "2",
 
     month: "JUL",
-    day: 19,
+    day: 12,
     weekday: "Sat",
 
     title:
@@ -108,8 +108,8 @@ export const upcomingEvents: Event[] = [
   {
     id: "3",
 
-    month: "AUG",
-    day: 3,
+    month: "JUL",
+    day: 13,
     weekday: "Sun",
 
     title:

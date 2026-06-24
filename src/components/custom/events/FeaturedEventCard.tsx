@@ -8,7 +8,7 @@ export default function FeaturedEventCard({
   event,
 }: Props) {
   return (
-    <div className="rounded-2xl bg-primary p-6 text-white">
+    <div className="rounded-2xl bg-[#0D2040] p-6 text-white">
       <div className="grid gap-4 md:grid-cols-[80px_1fr]">
         <div>
           <p>{event.month}</p>

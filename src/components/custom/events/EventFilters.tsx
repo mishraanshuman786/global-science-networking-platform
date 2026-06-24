@@ -1,20 +1,27 @@
 import { eventFilters } from "@/data/events";
 
-export default function EventFilters() {
+interface Props {
+  selectedFilter: string;
+  onFilterChange: (value: string) => void;
+}
+
+export default function EventFilters({
+  selectedFilter,
+  onFilterChange,
+}: Props) {
   return (
     <div className="flex flex-wrap gap-2">
       {eventFilters.map((filter, index) => (
         <button
           key={filter.id}
+          onClick={() => onFilterChange(filter.id)}
           className={`rounded-full px-4 py-2 text-sm
-          ${
-            index === 0
-              ? "bg-primary text-white"
-              : "border bg-white"
-          }`}
+  ${
+    selectedFilter === filter.id ? "bg-[#0D2040] text-white" : "border bg-white"
+  }`}
         >
           {filter.label}
-        </button>
+          </button>
       ))}
     </div>
   );

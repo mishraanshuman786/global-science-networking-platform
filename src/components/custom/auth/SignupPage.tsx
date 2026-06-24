@@ -2,6 +2,7 @@
 
 import { FcGoogle } from "react-icons/fc";
 import { Smartphone } from "lucide-react";
+import {handleGoogleLogin} from "../../../services/auth.service";
 
 export default function SignupPage() {
   return (
@@ -77,6 +78,7 @@ export default function SignupPage() {
               transition
               mb-3
             "
+            onClick={handleGoogleLogin}
           >
             <FcGoogle size={20} />
             Continue with Google
